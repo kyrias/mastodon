@@ -225,6 +225,14 @@ en:
         open:
           desc_html: Allow anyone to create an account
           title: Open registration
+        key: Secret registration key
+        types:
+          open: Open
+          open_long: Everyone can create an account
+          keyed: Keyed
+          keyed_long: Only people with a secret key can register
+          closed: Closed
+          closed_long: No one can register
       site_description:
         desc_html: Introductory paragraph on the frontpage and in meta tags. You can use HTML tags, in particular <code>&lt;a&gt;</code> and <code>&lt;em&gt;</code>.
         title: Instance description

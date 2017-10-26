@@ -14,7 +14,10 @@ module ApplicationHelper
   end
 
   def open_registrations?
-    Setting.open_registrations
+    registrations_allowed = Setting.registrations_allowed
+    return true if registrations_allowed == 'open'
+    return true if registrations_allowed == 'keyed' && params[:key] == Setting.registration_key
+    false
   end
 
   def open_deletion?
